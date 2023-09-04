@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+
+    background-color: rgba(255, 200, 18, 0.324);
+
+
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: -1px; */
+    flex-wrap: wrap;
+    gap: 199px;
+
+
+}
+
+.toDoApp {
+    width: 100%;
+    max-width: 530px;
+    /* background-color: #f9ab03; */
+    background: linear-gradient(135deg, #ffc81291, #54ad0069);
+    /* margin: 100px auto 20px; */
+    padding: 40px auto 70px;
+    margin-left: 12px;
+    margin-top: 12px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.toDoApp h2 {
+    color: #002765;
+    /* display: flex; */
+    /* align-items: center; */
+    margin-bottom: 20px;
+    margin-left: 134px;
+}
+
+.toDoApp h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+#addButton {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(/Assests/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    margin-left: -40px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+
+ul li.checked::before {
+    background-image: url(/Assests/checked.png);
+}
+
+
+ul li span {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    position: absolute;
+    right: 0;
+    margin-right: 875px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+    border-radius: 50%;
+}
+
+
+ul li span:hover {
+    background: #ffffff;
+}
+
+
+
+
+#popupContainer {
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: fixed; /* Fixed positioning to overlay on the content */
+    top: 50%; /* Position from the top */
+    left: 50%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center the popup */
+    z-index: 999; /* Ensure it's above other content */
+    display: none;
+
+}
+
+#popupContainer>img {
+    margin-top: -170px;
+}
+
+
+#popupContainer>h1 {
+    margin-top: 34px;
+    margin-left: 160px;
+    font-weight: bolder;
+}
+
+
+#popupContainer>p {
+    margin-top: 14px;
+    margin-left: 22px;
+}
+
+
+
+#okBtnPopUp {
+    margin-top: 90px;
+    margin-left: 100px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #2e2e2e;
+    color: #fff;
+    font-size: 20px;
+}
+
+#okBtnPopUp:hover {
+    background-color: #ffffff;
+    color: #2e2e2e;
+    border: 2px solid #2e2e2e;
+    transition: 300ms ease-in-out;
+
+
+}
